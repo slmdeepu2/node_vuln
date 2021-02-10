@@ -20,4 +20,4 @@ phases:
       - echo $SOURCE_BRANCH
   build:
     commands:
-      - ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.login=7217459f076cfccbd99ae0e20eeefcb95be5ab3b -Dsonar.projectKey=slmdeepu2_node_vuln -Dsonar.pullrequest.key=$PRNUMBER -Dsonar.pullrequest.branch=$SOURCE_BRANCH -Dsonar.pullrequest.base=$BASE_BRANCH
+      - ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.host.url=http://sonarcloud.io -Dsonar.login=7217459f076cfccbd99ae0e20eeefcb95be5ab3b -Dsonar.projectKey=slmdeepu2_node_vuln -Dsonar.pullrequest.key=$PRNUMBER -Dsonar.pullrequest.branch=$SOURCE_BRANCH -Dsonar.pullrequest.base=$BASE_BRANCH
