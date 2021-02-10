@@ -20,7 +20,4 @@ phases:
       - echo $SOURCE_BRANCH
   build:
     commands:
-      - ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.login=717f72c9c01932013ad042bfb7770494f56155be -Dsonar.projectKey=SAST-POC-JS -Dsonar.pullrequest.key=$PRNUMBER -Dsonar.pullrequest.branch=$SOURCE_BRANCH -Dsonar.pullrequest.base=$BASE_BRANCH
-      - curl http://50.17.139.139:9000/api/qualitygates/project_status?projectKey=SAST-POC-JS >result.json
-      - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then $CODEBUILD_BUILD_SUCCEEDING -eq 0 ;fi
+      - ./sonar-scanner-3.3.0.1492-linux/bin/sonar-scanner -Dsonar.login=7217459f076cfccbd99ae0e20eeefcb95be5ab3b -Dsonar.projectKey=slmdeepu2_node_vuln -Dsonar.pullrequest.key=$PRNUMBER -Dsonar.pullrequest.branch=$SOURCE_BRANCH -Dsonar.pullrequest.base=$BASE_BRANCH
