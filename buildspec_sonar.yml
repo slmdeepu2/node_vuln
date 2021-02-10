@@ -7,7 +7,7 @@ phases:
     commands:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update -y
-      - apt-get install -y wget jq
+      - apt-get install -y wget
       - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
       - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
       - ls -ltrh .
